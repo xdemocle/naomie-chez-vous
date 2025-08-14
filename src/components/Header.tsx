@@ -21,11 +21,11 @@ const Header = () => {
             <a href="#accueil" className="text-foreground hover:text-primary transition-colors">
               Accueil
             </a>
-            <a href="#maison" className="text-foreground hover:text-primary transition-colors">
-              Articles Maison
+            <a href="#produits" className="text-foreground hover:text-primary transition-colors">
+              Produits Vedettes
             </a>
-            <a href="#beaute" className="text-foreground hover:text-primary transition-colors">
-              Beauté
+            <a href="#galerie" className="text-foreground hover:text-primary transition-colors">
+              Galerie Complète
             </a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact

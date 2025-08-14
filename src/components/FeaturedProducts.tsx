@@ -1,8 +1,8 @@
 import ProductCard from "./ProductCard";
 import bottlesImage from "@/assets/bottles-collection.jpg";
 import beautyToolsImage from "@/assets/beauty-tools.jpg";
-import teaSetsImage from "@/assets/tea-sets.jpg";
-import storageCartImage from "@/assets/storage-cart.jpg";
+import hairSprayImage from "@/assets/hair-spray-products.jpg";
+import luxuryCookwareImage from "@/assets/luxury-cookware.jpg";
 
 const FeaturedProducts = () => {
   const products = [
@@ -23,20 +23,20 @@ const FeaturedProducts = () => {
       description: "Lisseurs, sèche-cheveux et fers à boucler de qualité professionnelle"
     },
     {
-      id: "3",
-      name: "Services à Thé Élégants",
-      price: "20.000 - 40.000 FCFA", 
-      image: teaSetsImage,
-      category: "Maison",
-      description: "Services à thé en porcelaine fine pour des moments de détente raffinés"
+      id: "5",
+      name: "Sprays Coiffure Professionnels",
+      price: "8.000 - 15.000 FCFA",
+      image: hairSprayImage,
+      category: "Beauté",
+      description: "Sprays fixateurs et texturisants pour une coiffure parfaite"
     },
     {
-      id: "4",
-      name: "Chariot de Rangement Cuisine",
-      price: "45.000 - 65.000 FCFA",
-      image: storageCartImage,
+      id: "9",
+      name: "Batterie de Cuisine Dorée",
+      price: "85.000 - 120.000 FCFA",
+      image: luxuryCookwareImage,
       category: "Maison",
-      description: "Organisation optimale pour votre cuisine avec ce chariot multifonctions"
+      description: "Set complet de casseroles blanches avec finitions dorées élégantes"
     }
   ];
 
@@ -63,6 +63,17 @@ const FeaturedProducts = () => {
               <ProductCard {...product} />
             </div>
           ))}
+        </div>
+        <div className="text-center mt-12 animate-fade-in">
+          <p className="text-muted-foreground mb-6">
+            Découvrez notre galerie complète avec plus de 50 produits
+          </p>
+          <button 
+            onClick={() => document.getElementById('galerie')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 py-3 bg-gradient-secondary text-secondary-foreground font-semibold rounded-lg hover:scale-105 transition-all duration-300 shadow-card"
+          >
+            Voir Toute la Galerie
+          </button>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
+import React from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import FeaturedProducts from "@/components/FeaturedProducts";
+import ProductGallery from "@/components/ProductGallery";
 import Categories from "@/components/Categories";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -13,6 +15,7 @@ const Index = () => {
       <main>
         <Hero />
         <FeaturedProducts />
+        <ProductGallery />
         <Categories />
         <Contact />
       </main>
