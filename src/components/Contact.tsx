@@ -5,7 +5,7 @@ import { MapPin, Phone, MessageCircle, Clock } from "lucide-react";
 const Contact = () => {
   const handleWhatsAppClick = () => {
     const message = "Bonjour! J'aimerais passer une commande ou avoir des informations sur vos produits.";
-    const phoneNumber = "242066000000";
+    const phoneNumber = "242067147133";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -20,8 +20,8 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Téléphone",
-      content: ["+242 06 600 00 00"],
-      action: () => window.open("tel:+242066000000")
+      content: ["+242 06 714 71 33"],
+      action: () => window.open("tel:+242067147133")
     },
     {
       icon: <MessageCircle className="h-6 w-6" />,

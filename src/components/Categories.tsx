@@ -22,7 +22,7 @@ const Categories = () => {
 
   const handleWhatsAppClick = () => {
     const message = "Bonjour! J'aimerais voir votre catalogue complet de produits.";
-    const phoneNumber = "242066000000";
+    const phoneNumber = "242067147133";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };

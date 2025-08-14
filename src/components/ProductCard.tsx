@@ -14,7 +14,7 @@ interface ProductCardProps {
 const ProductCard = ({ id, name, price, image, category, description }: ProductCardProps) => {
   const handleBuyNow = () => {
     const message = `Bonjour! Je suis intéressé(e) par le produit: ${name} (${price}). Pouvez-vous me donner plus d'informations?`;
-    const phoneNumber = "242066000000";
+    const phoneNumber = "242067147133";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };

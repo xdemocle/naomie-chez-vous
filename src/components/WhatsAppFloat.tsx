@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     const message = "Bonjour! Je visite votre boutique en ligne et j'aimerais avoir plus d'informations.";
-    const phoneNumber = "242066000000";
+    const phoneNumber = "242067147133";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };

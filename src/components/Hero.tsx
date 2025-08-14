@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/242066000000", "_blank");
+    window.open("https://wa.me/242067147133", "_blank");
   };
 
   return (
