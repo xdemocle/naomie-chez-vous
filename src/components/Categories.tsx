@@ -36,7 +36,9 @@ const Categories = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Catégories</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explorez nos deux univers dédiés à votre bien-être et votre confort
+            Trouvez facilement ce que vous cherchez dans nos différentes catégories. 
+            Chaque section regroupe des produits soigneusement sélectionnés pour répondre 
+            à vos besoins spécifiques en matière de maison et de beauté.
           </p>
         </div>
 

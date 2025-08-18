@@ -46,7 +46,8 @@ const Contact = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Nous</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Notre équipe est là pour vous accompagner dans vos achats et répondre à toutes vos questions
+            Notre équipe est à votre disposition pour vous conseiller et répondre à toutes vos questions. 
+            Commandez facilement via WhatsApp ou contactez-nous directement à Pointe-Noire.
           </p>
         </div>
 

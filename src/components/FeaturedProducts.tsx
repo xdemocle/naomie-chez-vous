@@ -49,7 +49,9 @@ const FeaturedProducts = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Vedettes</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez notre sélection soigneusement choisie d'articles pour embellir votre maison et sublimer votre beauté
+            Découvrez notre sélection d'articles de qualité pour votre maison et votre beauté. 
+            De l'organisation domestique aux soins capillaires, trouvez tout ce dont vous avez besoin 
+            pour améliorer votre quotidien à Pointe-Noire, République du Congo.
           </p>
         </div>
         

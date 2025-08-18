@@ -13,9 +13,9 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Votre Boutique
-              <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                Naomie
+              Boutique Naomie - Articles Maison et Accessoires Beauté à Pointe-Noire
+              <span className="block bg-gradient-primary bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl mt-2">
+                Qualité, Élégance et Style pour Votre Quotidien
               </span>
             </h1>
             

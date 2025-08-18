@@ -131,7 +131,9 @@ const ProductGallery = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Galerie Complète</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Découvrez tous nos produits soigneusement sélectionnés pour votre confort et votre beauté
+            Explorez toute notre collection d'articles pour la maison et la beauté. 
+            Des solutions de rangement innovantes aux produits de soins professionnels, 
+            chaque article est sélectionné pour sa qualité et son utilité au quotidien.
           </p>
           
           {/* Category filters */}
