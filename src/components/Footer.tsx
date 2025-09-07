@@ -4,7 +4,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const handleWhatsAppClick = () => {
-    window.open("https://wa.me/242067147133", "_blank");
+    window.open("https://wa.me/242067459576", "_blank");
   };
 
   return (
@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-primary-foreground/80">Téléphone:</p>
-                <p className="font-medium">+242 06 714 71 33</p>
+                <p className="font-medium">+242 06 745 9576</p>
               </div>
               <div>
                 <p className="text-sm text-primary-foreground/80">Horaires:</p>
