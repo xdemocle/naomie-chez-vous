@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import naomieLogo from "@/assets/naomie-logo.png";
 
 const Header = () => {
   const handleWhatsAppClick = () => {
@@ -10,11 +11,13 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Naomie
-            </h1>
-            <span className="text-sm text-muted-foreground">Pointe-Noire, ROC</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src={naomieLogo} 
+              alt="Naomie Shop Logo" 
+              className="h-8 w-auto md:h-6 lg:h-8"
+            />
+            <span className="text-sm text-muted-foreground hidden sm:block">Pointe-Noire, ROC</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
