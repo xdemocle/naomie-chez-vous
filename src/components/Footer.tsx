@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Naomie</h3>
+            <div className="text-2xl font-bold">Naomie</div>
             <p className="text-primary-foreground/80 leading-relaxed">
               Votre boutique de confiance pour les articles de maison et accessoires de beauté 
               à Pointe-Noire, République du Congo.
@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Liens Rapides</h4>
+            <div className="text-lg font-semibold">Liens Rapides</div>
             <div className="space-y-2">
               <a href="#accueil" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                 Accueil
@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Contact</h4>
+            <div className="text-lg font-semibold">Contact</div>
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-primary-foreground/80">Téléphone:</p>

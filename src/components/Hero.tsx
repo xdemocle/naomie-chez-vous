@@ -13,15 +13,15 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Boutique Naomie - Articles Maison et Accessoires Beauté à Pointe-Noire
-              <span className="block bg-gradient-primary bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl mt-2">
-                Qualité, Élégance et Style pour Votre Quotidien
-              </span>
+              Boutique Naomie - Articles Maison et Accessoires Beauté à Pointe-Noire : Qualité, Élégance et Style pour Votre Quotidien
             </h1>
             
+            <p className="text-xl bg-gradient-primary bg-clip-text text-transparent font-semibold mt-4">
+              Découvrez notre collection exclusive d'articles pour la maison et d'accessoires de beauté en République du Congo
+            </p>
+            
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Découvrez notre collection exclusive d'articles pour la maison et d'accessoires de beauté. 
-              Qualité, élégance et style pour votre quotidien.
+              Livraison rapide à Pointe-Noire. Commandez facilement sur WhatsApp.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
