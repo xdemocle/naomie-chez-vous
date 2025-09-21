@@ -1,5 +1,7 @@
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from 'react';
+import { ViteReactSSG } from 'vite-react-ssg';
+import { routes } from './routes';
+import './index.css';
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Configure vite-react-ssg with the simplest possible setup
+export const createRoot = ViteReactSSG({ routes });
