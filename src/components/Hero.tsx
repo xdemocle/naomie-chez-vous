@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import naomieLogo from "@/assets/naomie-logo.png";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -12,6 +13,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
+            <div className="flex justify-center lg:justify-start mb-8">
+              <img 
+                src={naomieLogo} 
+                alt="Logo Naomie Boutique" 
+                className="h-20 md:h-24 w-auto"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Boutique Naomie - Articles Maison et Accessoires Beauté à Pointe-Noire : Qualité, Élégance et Style pour Votre Quotidien
             </h1>

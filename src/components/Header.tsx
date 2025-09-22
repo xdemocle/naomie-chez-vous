@@ -18,7 +18,7 @@ const Header = () => {
               alt="Naomie Shop Logo" 
               className="h-6 w-auto md:h-5 lg:h-6"
             />
-            <span className="text-sm text-muted-foreground hidden sm:block">Pointe-Noire, ROC</span>
+            <span className="text-sm text-muted-foreground hidden sm:block">Naomie - Pointe-Noire, ROC</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-6">
