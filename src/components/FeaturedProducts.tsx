@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
     {
       id: "13",
       name: "Sac à Main V Logo Orange",
-      price: "45.000 - 65.000 FCFA",
+      price: "20.000 FCFA",
       image: orangeVlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac à main élégant couleur orange avec logo V argenté et coutures blanches"
@@ -17,7 +17,7 @@ const FeaturedProducts = () => {
     {
       id: "15",
       name: "Sac à Main B Logo Noir",
-      price: "60.000 - 90.000 FCFA",
+      price: "20.000 FCFA",
       image: blackBlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac noir texturé avec grand logo B doré et poignées élégantes"
@@ -25,7 +25,7 @@ const FeaturedProducts = () => {
     {
       id: "17",
       name: "Sac à Main Rose B Logo",
-      price: "50.000 - 75.000 FCFA",
+      price: "20.000 FCFA",
       image: pinkBlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac rose pâle brillant avec logo B doré et poignées arrondies"
@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
     {
       id: "20",
       name: "Sandales Motif Hermès",
-      price: "25.000 - 40.000 FCFA",
+      price: "25.000 FCFA",
       image: hermesPatternSandals,
       category: "Sacs & Chaussures",
       description: "Sandales élégantes avec motif noir et blanc inspiré Hermès"

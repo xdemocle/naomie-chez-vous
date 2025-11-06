@@ -29,7 +29,7 @@ const ProductGallery = () => {
     {
       id: "13",
       name: "Sac à Main V Logo Orange",
-      price: "45.000 - 65.000 FCFA",
+      price: "20.000 FCFA",
       image: orangeVlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac à main élégant couleur orange avec logo V argenté et coutures blanches"
@@ -37,7 +37,7 @@ const ProductGallery = () => {
     {
       id: "14",
       name: "Collection Sacs Matelassés",
-      price: "55.000 - 85.000 FCFA",
+      price: "20.000 FCFA",
       image: quiltedBags,
       category: "Sacs & Chaussures",
       description: "Sacs matelassés de luxe en bleu royal et beige avec fermeture dorée"
@@ -45,7 +45,7 @@ const ProductGallery = () => {
     {
       id: "15",
       name: "Sac à Main B Logo Noir",
-      price: "60.000 - 90.000 FCFA",
+      price: "20.000 FCFA",
       image: blackBlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac noir texturé avec grand logo B doré et poignées élégantes"
@@ -53,7 +53,7 @@ const ProductGallery = () => {
     {
       id: "16",
       name: "Sac Cabas Beige",
-      price: "40.000 - 60.000 FCFA",
+      price: "20.000 FCFA",
       image: beigeToteBag,
       category: "Sacs & Chaussures",
       description: "Cabas spacieux beige avec détail turquoise et fermetures dorées"
@@ -61,7 +61,7 @@ const ProductGallery = () => {
     {
       id: "17",
       name: "Sac à Main Rose B Logo",
-      price: "50.000 - 75.000 FCFA",
+      price: "20.000 FCFA",
       image: pinkBlogoBag,
       category: "Sacs & Chaussures",
       description: "Sac rose pâle brillant avec logo B doré et poignées arrondies"
@@ -69,7 +69,7 @@ const ProductGallery = () => {
     {
       id: "18",
       name: "Grand Cabas Crème",
-      price: "45.000 - 70.000 FCFA",
+      price: "20.000 FCFA",
       image: creamLargeTote,
       category: "Sacs & Chaussures",
       description: "Grand sac cabas crème tressé avec anses en cuir et détails dorés"
@@ -77,7 +77,7 @@ const ProductGallery = () => {
     {
       id: "19",
       name: "Sac Bicolore V Logo",
-      price: "40.000 - 65.000 FCFA",
+      price: "20.000 FCFA",
       image: twotoneBag,
       category: "Sacs & Chaussures",
       description: "Sac bandoulière noir et camel avec logo V argenté et coutures contrastées"
@@ -85,7 +85,7 @@ const ProductGallery = () => {
     {
       id: "20",
       name: "Sandales Motif Hermès",
-      price: "25.000 - 40.000 FCFA",
+      price: "25.000 FCFA",
       image: hermesPatternSandals,
       category: "Sacs & Chaussures",
       description: "Sandales élégantes avec motif noir et blanc inspiré Hermès dans boîte orange"
@@ -93,7 +93,7 @@ const ProductGallery = () => {
     {
       id: "21",
       name: "Sandales Bleues Croco",
-      price: "30.000 - 45.000 FCFA",
+      price: "25.000 FCFA",
       image: blueCrocSandals,
       category: "Sacs & Chaussures",
       description: "Sandales bleues effet crocodile avec logo H doré, style luxe"
@@ -101,7 +101,7 @@ const ProductGallery = () => {
     {
       id: "22",
       name: "Tongs Blanches Logo B",
-      price: "20.000 - 35.000 FCFA",
+      price: "25.000 FCFA",
       image: whiteBFlipflops,
       category: "Sacs & Chaussures",
       description: "Tongs blanches élégantes avec logo B doré, confort premium"
