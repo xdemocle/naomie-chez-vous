@@ -1,42 +1,42 @@
 import ProductCard from "./ProductCard";
-import bottlesImage from "@/assets/bottles-collection.jpg";
-import beautyToolsImage from "@/assets/beauty-tools.jpg";
-import hairSprayImage from "@/assets/hair-spray-products.jpg";
-import luxuryCookwareImage from "@/assets/luxury-cookware.jpg";
+import orangeVlogoBag from "@/assets/orange-vlogo-bag.jpg";
+import blackBlogoBag from "@/assets/black-b-logo-bag.jpg";
+import pinkBlogoBag from "@/assets/pink-b-logo-bag.jpg";
+import hermesPatternSandals from "@/assets/hermes-pattern-sandals.jpg";
 
 const FeaturedProducts = () => {
   const products = [
     {
-      id: "1",
-      name: "Collection Bouteilles Thermiques",
-      price: "15.000 - 25.000 FCFA",
-      image: bottlesImage,
-      category: "Maison",
-      description: "Bouteilles isothermes élégantes pour maintenir vos boissons à température idéale"
+      id: "13",
+      name: "Sac à Main V Logo Orange",
+      price: "45.000 - 65.000 FCFA",
+      image: orangeVlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac à main élégant couleur orange avec logo V argenté et coutures blanches"
     },
     {
-      id: "2", 
-      name: "Outils de Coiffure Professionnels",
-      price: "35.000 - 55.000 FCFA",
-      image: beautyToolsImage,
-      category: "Beauté",
-      description: "Lisseurs, sèche-cheveux et fers à boucler de qualité professionnelle"
+      id: "15",
+      name: "Sac à Main B Logo Noir",
+      price: "60.000 - 90.000 FCFA",
+      image: blackBlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac noir texturé avec grand logo B doré et poignées élégantes"
     },
     {
-      id: "5",
-      name: "Sprays Coiffure Professionnels",
-      price: "8.000 - 15.000 FCFA",
-      image: hairSprayImage,
-      category: "Beauté",
-      description: "Sprays fixateurs et texturisants pour une coiffure parfaite"
+      id: "17",
+      name: "Sac à Main Rose B Logo",
+      price: "50.000 - 75.000 FCFA",
+      image: pinkBlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac rose pâle brillant avec logo B doré et poignées arrondies"
     },
     {
-      id: "9",
-      name: "Batterie de Cuisine Dorée",
-      price: "85.000 - 120.000 FCFA",
-      image: luxuryCookwareImage,
-      category: "Maison",
-      description: "Set complet de casseroles blanches avec finitions dorées élégantes"
+      id: "20",
+      name: "Sandales Motif Hermès",
+      price: "25.000 - 40.000 FCFA",
+      image: hermesPatternSandals,
+      category: "Sacs & Chaussures",
+      description: "Sandales élégantes avec motif noir et blanc inspiré Hermès"
     }
   ];
 

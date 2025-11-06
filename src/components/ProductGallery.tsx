@@ -12,9 +12,100 @@ import luxuryCookwareImage from "@/assets/luxury-cookware.jpg";
 import shoeOrganizerImage from "@/assets/shoe-organizer.jpg";
 import roseWallArtImage from "@/assets/rose-wall-art.jpg";
 import africanWallArtImage from "@/assets/african-wall-art.jpg";
+import orangeVlogoBag from "@/assets/orange-vlogo-bag.jpg";
+import quiltedBags from "@/assets/quilted-bags-collection.jpg";
+import blackBlogoBag from "@/assets/black-b-logo-bag.jpg";
+import beigeToteBag from "@/assets/beige-tote-bag.jpg";
+import pinkBlogoBag from "@/assets/pink-b-logo-bag.jpg";
+import creamLargeTote from "@/assets/cream-large-tote.jpg";
+import twotoneBag from "@/assets/twotone-vlogo-bag.jpg";
+import hermesPatternSandals from "@/assets/hermes-pattern-sandals.jpg";
+import blueCrocSandals from "@/assets/blue-croc-sandals.jpg";
+import whiteBFlipflops from "@/assets/white-b-flipflops.jpg";
 
 const ProductGallery = () => {
   const allProducts = [
+    // Latest products - Sacs & Chaussures
+    {
+      id: "13",
+      name: "Sac à Main V Logo Orange",
+      price: "45.000 - 65.000 FCFA",
+      image: orangeVlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac à main élégant couleur orange avec logo V argenté et coutures blanches"
+    },
+    {
+      id: "14",
+      name: "Collection Sacs Matelassés",
+      price: "55.000 - 85.000 FCFA",
+      image: quiltedBags,
+      category: "Sacs & Chaussures",
+      description: "Sacs matelassés de luxe en bleu royal et beige avec fermeture dorée"
+    },
+    {
+      id: "15",
+      name: "Sac à Main B Logo Noir",
+      price: "60.000 - 90.000 FCFA",
+      image: blackBlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac noir texturé avec grand logo B doré et poignées élégantes"
+    },
+    {
+      id: "16",
+      name: "Sac Cabas Beige",
+      price: "40.000 - 60.000 FCFA",
+      image: beigeToteBag,
+      category: "Sacs & Chaussures",
+      description: "Cabas spacieux beige avec détail turquoise et fermetures dorées"
+    },
+    {
+      id: "17",
+      name: "Sac à Main Rose B Logo",
+      price: "50.000 - 75.000 FCFA",
+      image: pinkBlogoBag,
+      category: "Sacs & Chaussures",
+      description: "Sac rose pâle brillant avec logo B doré et poignées arrondies"
+    },
+    {
+      id: "18",
+      name: "Grand Cabas Crème",
+      price: "45.000 - 70.000 FCFA",
+      image: creamLargeTote,
+      category: "Sacs & Chaussures",
+      description: "Grand sac cabas crème tressé avec anses en cuir et détails dorés"
+    },
+    {
+      id: "19",
+      name: "Sac Bicolore V Logo",
+      price: "40.000 - 65.000 FCFA",
+      image: twotoneBag,
+      category: "Sacs & Chaussures",
+      description: "Sac bandoulière noir et camel avec logo V argenté et coutures contrastées"
+    },
+    {
+      id: "20",
+      name: "Sandales Motif Hermès",
+      price: "25.000 - 40.000 FCFA",
+      image: hermesPatternSandals,
+      category: "Sacs & Chaussures",
+      description: "Sandales élégantes avec motif noir et blanc inspiré Hermès dans boîte orange"
+    },
+    {
+      id: "21",
+      name: "Sandales Bleues Croco",
+      price: "30.000 - 45.000 FCFA",
+      image: blueCrocSandals,
+      category: "Sacs & Chaussures",
+      description: "Sandales bleues effet crocodile avec logo H doré, style luxe"
+    },
+    {
+      id: "22",
+      name: "Tongs Blanches Logo B",
+      price: "20.000 - 35.000 FCFA",
+      image: whiteBFlipflops,
+      category: "Sacs & Chaussures",
+      description: "Tongs blanches élégantes avec logo B doré, confort premium"
+    },
     // Existing products
     {
       id: "1",
@@ -115,7 +206,7 @@ const ProductGallery = () => {
     }
   ];
 
-  const categories = ["Tous", "Maison", "Beauté", "Décoration"];
+  const categories = ["Tous", "Sacs & Chaussures", "Maison", "Beauté", "Décoration"];
   const [selectedCategory, setSelectedCategory] = React.useState("Tous");
 
   const filteredProducts = selectedCategory === "Tous" 
