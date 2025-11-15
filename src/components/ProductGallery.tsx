@@ -22,10 +22,65 @@ import twotoneBag from "@/assets/twotone-vlogo-bag.jpg";
 import hermesPatternSandals from "@/assets/hermes-pattern-sandals.jpg";
 import blueCrocSandals from "@/assets/blue-croc-sandals.jpg";
 import whiteBFlipflops from "@/assets/white-b-flipflops.jpg";
+import luxuryHeelPerfume from "@/assets/luxury-heel-perfume.jpg";
+import hawiyaPerfume from "@/assets/hawiya-perfume.jpg";
+import ameeratPerfume from "@/assets/ameerat-perfume.jpg";
+import soLovePerfume from "@/assets/so-love-perfume.jpg";
+import sovaryPerfume from "@/assets/sovary-perfume.jpg";
+import shaikhSultanPerfume from "@/assets/shaikh-sultan-perfume.jpg";
 
 const ProductGallery = () => {
   const allProducts = [
-    // Latest products - Sacs & Chaussures
+    // Latest products - Parfums
+    {
+      id: "23",
+      name: "Parfum Luxe Talon Bleu",
+      price: "10.000 FCFA",
+      image: luxuryHeelPerfume,
+      category: "Parfums",
+      description: "Eau de parfum élégante avec design talon bleu emblématique"
+    },
+    {
+      id: "24",
+      name: "Hawiya For Him",
+      price: "10.000 FCFA",
+      image: hawiyaPerfume,
+      category: "Parfums",
+      description: "Parfum masculin Oulsetten, vaporisateur naturel 100ml"
+    },
+    {
+      id: "25",
+      name: "Ameerat Al Arab Wardi",
+      price: "10.000 FCFA",
+      image: ameeratPerfume,
+      category: "Parfums",
+      description: "Eau de parfum Exotic Collection, spray naturel 100ml"
+    },
+    {
+      id: "26",
+      name: "So Love Elite",
+      price: "10.000 FCFA",
+      image: soLovePerfume,
+      category: "Parfums",
+      description: "Eau de parfum Elite Collection, spray naturel 100ml"
+    },
+    {
+      id: "27",
+      name: "Sovary Elixir",
+      price: "10.000 FCFA",
+      image: sovaryPerfume,
+      category: "Parfums",
+      description: "Eau de parfum Exotic Collection, spray naturel 100ml"
+    },
+    {
+      id: "28",
+      name: "Shaikh Al Sultan",
+      price: "10.000 FCFA",
+      image: shaikhSultanPerfume,
+      category: "Parfums",
+      description: "Eau de parfum prestige Exotic Collection 100ml"
+    },
+    // Sacs & Chaussures
     {
       id: "13",
       name: "Sac à Main V Logo Orange",
@@ -206,7 +261,7 @@ const ProductGallery = () => {
     }
   ];
 
-  const categories = ["Tous", "Sacs & Chaussures", "Maison", "Beauté", "Décoration"];
+  const categories = ["Tous", "Parfums", "Sacs & Chaussures", "Maison", "Beauté", "Décoration"];
   const [selectedCategory, setSelectedCategory] = React.useState("Tous");
 
   const filteredProducts = selectedCategory === "Tous" 
