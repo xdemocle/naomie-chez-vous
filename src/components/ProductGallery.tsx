@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import ProductCard from "./ProductCard";
+import { Input } from "@/components/ui/input";
+import { Slider } from "@/components/ui/slider";
+import { Search, SlidersHorizontal, X } from "lucide-react";
 import bottlesImage from "@/assets/bottles-collection.jpg";
 import beautyToolsImage from "@/assets/beauty-tools.jpg";
 import teaSetsImage from "@/assets/tea-sets.jpg";
@@ -262,11 +265,40 @@ const ProductGallery = () => {
   ];
 
   const categories = ["Tous", "Parfums", "Sacs & Chaussures", "Maison", "Beauté", "Décoration"];
-  const [selectedCategory, setSelectedCategory] = React.useState("Tous");
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [priceRange, setPriceRange] = useState([0, 150000]);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const filteredProducts = selectedCategory === "Tous" 
-    ? allProducts 
-    : allProducts.filter(product => product.category === selectedCategory);
+  // Helper to extract min price from price string
+  const extractMinPrice = (priceStr: string): number => {
+    const match = priceStr.match(/[\d.]+/);
+    return match ? parseFloat(match[0].replace(".", "")) * 1000 : 0;
+  };
+
+  const filteredProducts = useMemo(() => {
+    return allProducts.filter(product => {
+      // Category filter
+      const categoryMatch = selectedCategory === "Tous" || product.category === selectedCategory;
+      
+      // Search filter
+      const searchMatch = searchQuery === "" || 
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      // Price filter
+      const productPrice = extractMinPrice(product.price);
+      const priceMatch = productPrice >= priceRange[0] && productPrice <= priceRange[1];
+      
+      return categoryMatch && searchMatch && priceMatch;
+    });
+  }, [selectedCategory, searchQuery, priceRange]);
+
+  const clearFilters = () => {
+    setSearchQuery("");
+    setSelectedCategory("Tous");
+    setPriceRange([0, 150000]);
+  };
 
   return (
     <section id="galerie" className="py-16 bg-background">
@@ -277,18 +309,76 @@ const ProductGallery = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent"> Galerie Complète</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Explorez toute notre collection d'articles pour la maison et la beauté. 
-            Des solutions de rangement innovantes aux produits de soins professionnels, 
-            chaque article est sélectionné pour sa qualité et son utilité au quotidien.
+            Explorez toute notre collection d'articles pour la maison et la beauté.
           </p>
           
+          {/* Search and filters */}
+          <div className="max-w-4xl mx-auto mb-8 space-y-4">
+            {/* Search bar */}
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              <Input
+                type="text"
+                placeholder="Rechercher un produit..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-12 pr-12 py-6 text-lg rounded-full border-border"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              )}
+            </div>
+
+            {/* Toggle filters button */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <SlidersHorizontal className="h-4 w-4" />
+              {showFilters ? "Masquer les filtres" : "Afficher les filtres"}
+            </button>
+
+            {/* Expandable filters */}
+            {showFilters && (
+              <div className="bg-card rounded-2xl p-6 border border-border shadow-card animate-fade-in">
+                {/* Price range */}
+                <div className="mb-6">
+                  <label className="block text-sm font-medium text-foreground mb-3">
+                    Fourchette de prix: {priceRange[0].toLocaleString()} - {priceRange[1].toLocaleString()} FCFA
+                  </label>
+                  <Slider
+                    value={priceRange}
+                    onValueChange={setPriceRange}
+                    min={0}
+                    max={150000}
+                    step={5000}
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Clear filters button */}
+                <button
+                  onClick={clearFilters}
+                  className="text-sm text-primary hover:underline"
+                >
+                  Réinitialiser les filtres
+                </button>
+              </div>
+            )}
+          </div>
+          
           {/* Category filters */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-5 py-2.5 rounded-full font-medium transition-all duration-300 text-sm ${
                   selectedCategory === category
                     ? "bg-gradient-primary text-primary-foreground shadow-button"
                     : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
@@ -298,6 +388,11 @@ const ProductGallery = () => {
               </button>
             ))}
           </div>
+
+          {/* Results count */}
+          <p className="text-sm text-muted-foreground mb-4">
+            {filteredProducts.length} produit{filteredProducts.length !== 1 ? "s" : ""} trouvé{filteredProducts.length !== 1 ? "s" : ""}
+          </p>
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
