@@ -270,10 +270,12 @@ const ProductGallery = () => {
   const [priceRange, setPriceRange] = useState([0, 150000]);
   const [showFilters, setShowFilters] = useState(false);
 
-  // Helper to extract min price from price string
+  // Helper to extract min price from price string (e.g., "10.000 FCFA" or "15.000 - 25.000 FCFA")
   const extractMinPrice = (priceStr: string): number => {
-    const match = priceStr.match(/[\d.]+/);
-    return match ? parseFloat(match[0].replace(".", "")) * 1000 : 0;
+    // Remove dots used as thousand separators and extract first number
+    const cleanedStr = priceStr.replace(/\./g, "");
+    const match = cleanedStr.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
   };
 
   const filteredProducts = useMemo(() => {
