@@ -374,21 +374,23 @@ const ProductGallery = () => {
             )}
           </div>
           
-          {/* Category filters */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-5 py-2.5 rounded-full font-medium transition-all duration-300 text-sm ${
-                  selectedCategory === category
-                    ? "bg-gradient-primary text-primary-foreground shadow-button"
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
+          {/* Category filters - scrollable on mobile */}
+          <div className="overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible">
+            <div className="flex sm:flex-wrap sm:justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 min-w-max sm:min-w-0">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-medium transition-all duration-300 text-xs sm:text-sm whitespace-nowrap ${
+                    selectedCategory === category
+                      ? "bg-gradient-primary text-primary-foreground shadow-button"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Results count */}
