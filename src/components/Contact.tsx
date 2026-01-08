@@ -1,9 +1,48 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { MapPin, Phone, MessageCircle, Clock } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+
+const contactSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, { message: "Le nom doit contenir au moins 2 caractères" })
+    .max(50, { message: "Le nom doit contenir moins de 50 caractères" })
+    .regex(/^[a-zA-ZÀ-ÿ\s'-]+$/, { message: "Le nom contient des caractères invalides" }),
+  message: z
+    .string()
+    .trim()
+    .min(10, { message: "Le message doit contenir au moins 10 caractères" })
+    .max(500, { message: "Le message doit contenir moins de 500 caractères" }),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
-  const handleWhatsAppClick = () => {
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      message: "",
+    },
+  });
+
+  const handleWhatsAppSubmit = (data: ContactFormData) => {
+    const phoneNumber = "242067459576";
+    const formattedMessage = `Bonjour! Je suis ${data.name}.\n\n${data.message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
+    window.open(whatsappUrl, "_blank");
+    form.reset();
+  };
+
+  const handleQuickWhatsApp = () => {
     const message = "Bonjour! J'aimerais passer une commande ou avoir des informations sur vos produits.";
     const phoneNumber = "242067459576";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -27,7 +66,7 @@ const Contact = () => {
       icon: <MessageCircle className="h-6 w-6" />,
       title: "WhatsApp Business",
       content: ["Commandes et informations", "Réponse rapide garantie"],
-      action: handleWhatsAppClick
+      action: handleQuickWhatsApp
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -80,24 +119,59 @@ const Contact = () => {
           ))}
         </div>
 
-        <div className="text-center space-y-6 animate-fade-in">
-          <div className="bg-card rounded-2xl p-8 shadow-card border border-border max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-card-foreground mb-4">
-              Commandez facilement sur WhatsApp
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Envoyez-nous un message avec le produit qui vous intéresse et nous vous guiderons pour votre commande. 
-              Livraison rapide à Pointe-Noire et environs.
-            </p>
-            <Button 
-              size="lg" 
-              onClick={handleWhatsAppClick}
-              className="text-lg"
-            >
-              <MessageCircle className="h-5 w-5" />
-              Commencer une Conversation
-            </Button>
-          </div>
+        <div className="bg-card rounded-2xl p-8 shadow-card border border-border max-w-2xl mx-auto">
+          <h3 className="text-xl font-semibold text-card-foreground mb-4">
+            Commandez facilement sur WhatsApp
+          </h3>
+          <p className="text-muted-foreground mb-6">
+            Remplissez le formulaire ci-dessous pour nous envoyer votre demande via WhatsApp.
+          </p>
+          
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(handleWhatsAppSubmit)} className="space-y-4 text-left">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Votre nom</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="Entrez votre nom" 
+                        {...field} 
+                        maxLength={50}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Votre message</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="Décrivez le produit qui vous intéresse ou posez vos questions..." 
+                        className="min-h-[100px] resize-none"
+                        {...field}
+                        maxLength={500}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              
+              <Button type="submit" size="lg" className="w-full text-lg">
+                <MessageCircle className="h-5 w-5" />
+                Envoyer via WhatsApp
+              </Button>
+            </form>
+          </Form>
         </div>
       </div>
     </section>
