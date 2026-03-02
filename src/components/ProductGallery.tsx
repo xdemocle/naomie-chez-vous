@@ -31,9 +31,19 @@ import ameeratPerfume from "@/assets/ameerat-perfume.jpg";
 import soLovePerfume from "@/assets/so-love-perfume.jpg";
 import sovaryPerfume from "@/assets/sovary-perfume.jpg";
 import shaikhSultanPerfume from "@/assets/shaikh-sultan-perfume.jpg";
+import lipProductsRose from "@/assets/lip-products-rose.jpg";
 
 const ProductGallery = () => {
   const allProducts = [
+    // Produits lèvres
+    {
+      id: "29",
+      name: "Produits Lèvres Roses 👄",
+      price: "5.000 FCFA",
+      image: lipProductsRose,
+      category: "Beauté",
+      description: "Collection de baumes et gloss pour des lèvres douces et colorées"
+    },
     // Latest products - Parfums
     {
       id: "23",
