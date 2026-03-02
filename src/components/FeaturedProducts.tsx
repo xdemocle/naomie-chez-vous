@@ -3,9 +3,18 @@ import orangeVlogoBag from "@/assets/orange-vlogo-bag.jpg";
 import blackBlogoBag from "@/assets/black-b-logo-bag.jpg";
 import pinkBlogoBag from "@/assets/pink-b-logo-bag.jpg";
 import hermesPatternSandals from "@/assets/hermes-pattern-sandals.jpg";
+import lipProductsRose from "@/assets/lip-products-rose.jpg";
 
 const FeaturedProducts = () => {
   const products = [
+    {
+      id: "29",
+      name: "Produits Lèvres Roses 👄",
+      price: "5.000 FCFA",
+      image: lipProductsRose,
+      category: "Beauté",
+      description: "Collection de baumes et gloss pour des lèvres douces et colorées"
+    },
     {
       id: "13",
       name: "Sac à Main V Logo Orange",
